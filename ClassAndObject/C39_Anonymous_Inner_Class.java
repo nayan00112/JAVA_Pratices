@@ -53,7 +53,7 @@ public class C39_Anonymous_Inner_Class {
     public static void main(String arg[]) {
         // Anonymous Class
         A obj = new A(){
-            public void show() {
+            public void show() { // override the show method in class A.
                 System.out.println("in the best");
             }
         };

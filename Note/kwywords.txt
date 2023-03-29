@@ -2,3 +2,13 @@ Abstract
 public
 final
 static
+
+
+/* C49
+ * Access Modifiers
+ * > Final
+ * > Abstract
+ * > Private
+ * > Protected
+ * **Privated and Protected cannot be used with class.
+*/

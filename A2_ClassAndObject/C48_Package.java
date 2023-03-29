@@ -7,7 +7,7 @@
  * same name file can exist there, due to different packages. (in Eclipse)
 */
 
-// package ClassAndObject2; // Error...!!! (why?)
+// package ClassAndObject; // Error...!!! (why?)
 public class C48_Package {
     public static void main(String arg[])
     {

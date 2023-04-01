@@ -12,3 +12,5 @@ static
  * > Protected
  * **Privated and Protected cannot be used with class.
 */
+
+:) // be happy...

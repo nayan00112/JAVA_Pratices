@@ -1,0 +1,8 @@
+What is hashcode in java ?
+In Java, hashCode() is a method that returns a hash code value for an object. The hash code is an integer value that is typically used for hashing algorithms and data structures like hash tables, which allow efficient lookup, insertion, and deletion of objects.
+
+The hashCode() method is defined in the Object class, which is the base class for all Java classes. By default, the hashCode() method returns a unique integer value for each object instance, based on the memory location of the object in the JVM heap.
+
+However, in many cases, it is useful to define a custom hashCode() method for a class. This can be done by overriding the hashCode() method in the class and providing an implementation that generates a hash code based on the object's state. This allows objects with the same state to have the same hash code, which can be useful for equality comparisons and other operations.
+
+It's important to note that the hashCode() method should be implemented consistently with the equals() method, such that if two objects are considered equal based on their state, they should have the same hash code. This is because many data structures and algorithms rely on the contract that if a.equals(b) is true, then a.hashCode() and b.hashCode() should return the same value.

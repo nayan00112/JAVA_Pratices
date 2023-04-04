@@ -1,0 +1,16 @@
+What is Object class in java?
+
+In Java, the Object class is a fundamental class that serves as the base class for all other classes in the Java programming language. Every class in Java, either directly or indirectly, inherits from the Object class, which means that every object in Java is an Object or a subclass of Object.
+
+The Object class provides a set of methods that are common to all Java objects. These methods include:
+
+equals(): compares two objects for equality.
+hashCode(): returns a hash code value for the object.
+toString(): returns a string representation of the object.
+getClass(): returns the runtime class of the object.
+notify(): wakes up a single thread that is waiting on the object's monitor.
+notifyAll(): wakes up all threads that are waiting on the object's monitor.
+wait(): causes the current thread to wait until another thread notifies it or the specified amount of time has elapsed.
+In addition, the Object class defines the finalize() method, which is called by the garbage collector when an object is no longer referenced by any other object and is eligible for garbage collection. The finalize() method can be overridden by subclasses to perform any necessary cleanup operations before the object is destroyed.
+
+Since all classes in Java inherit from the Object class, the methods provided by Object are available to all objects in Java. However, subclasses can override these methods to provide their own implementation, if necessary.

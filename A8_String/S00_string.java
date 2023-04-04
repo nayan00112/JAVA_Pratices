@@ -64,6 +64,12 @@ public class S00_string {
          * string.
          */
         System.out.println(s.charAt(2));
+
+        String a = "Hello World";
+        System.out.println(a.contains("e"));
+        System.out.println(a.endsWith("rld"));
+        System.out.println(a.endsWith("World"));
+
     }
 }
 
@@ -76,3 +82,6 @@ public class S00_string {
 // out of range:50-684086787
 // Nayan Patel Ashokbhaijjj-9546739
 // y
+// true
+// true
+// true

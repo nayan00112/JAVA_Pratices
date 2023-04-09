@@ -10,14 +10,27 @@ interface Student {
 interface Teacher {
     void teacher_show();
 }
+interface Books{
+    void book();
+}
+interface Library extends Books {
+    void read();
+}
 
-class School implements Student, Teacher {
+class School implements Student, Teacher, Library {
     public void student_show() {
         System.out.println("Student show info.");
     }
 
     public void teacher_show() {
         System.out.println("Teacher show info.");
+    }
+
+    public void read(){
+        System.out.println("I am reading");
+    }
+    public void book(){
+        System.out.println("This is a book.");
     }
 
 }
@@ -27,12 +40,18 @@ public class C38_Interface {
         School s1 = new School();
         s1.student_show();
         s1.teacher_show();
+
+        School s2 = new School();
+        s2.book();
+        s2.read();
     }
 }
 
 // Output:
 // Student show info.
 // Teacher show info.
+// This is a book.
+// I am reading
 
 /*
  * Tip: Always go for interfaces if we only want to define the method.

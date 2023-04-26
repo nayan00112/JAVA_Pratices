@@ -1,0 +1,29 @@
+In Java, the `Scanner` class is used to read input from the console or from a file. When you create a `Scanner` instance, it opens a stream to the input source (console or file) and holds resources, such as file descriptors or network sockets, that are used to read input data.
+
+If you don't close the `Scanner` instance after using it, the resources that it holds will not be released, which can cause memory leaks and other issues. This is because the `Scanner` class implements the `Closeable` interface, which means that it has a `close()` method that can be used to release the resources that it holds.
+
+Therefore, it's important to call the `close()` method on a `Scanner` instance when you're done using it. This will release the resources that it holds and free up memory. If you don't close the `Scanner` instance explicitly, the JVM will eventually close it when it's garbage collected, but this may not happen immediately, which can cause performance issues and other problems.
+
+To ensure that the `Scanner` instance is always closed, you can use a try-with-resources statement in your code, like this:
+
+```
+try (Scanner scanner = new Scanner(System.in)) {
+    // Use the scanner instance to read input
+} catch (IOException e) {
+    // Handle any exceptions that occur
+}
+```
+
+In this code, the `Scanner` instance is created inside the try-with-resources block, and it is automatically closed when the block is exited, regardless of whether an exception occurs or not.
+
+
+
+Memory leaks refer to a situation in computer programming where a program continues to consume memory even when it no longer needs it, eventually causing the program to run out of memory or crash. In other words, memory leaks occur when memory that is no longer needed by the program is not properly released back to the system, and as a result, the program continues to hold onto that memory, even though it's no longer using it.
+
+Memory leaks can be caused by a variety of factors, such as programming errors, inefficient memory management, or bugs in the operating system or third-party libraries. Some common examples of programming errors that can cause memory leaks include:
+
+- Failing to deallocate memory that has been dynamically allocated using `malloc()` or `new`.
+- Failing to close file handles or network sockets after they are no longer needed.
+- Storing references to objects that are no longer used, preventing the garbage collector from reclaiming the memory they occupy.
+
+Memory leaks can have a number of negative consequences, such as reducing the performance of the system, causing the system to crash or become unstable, and potentially exposing sensitive data to attackers. Therefore, it's important for programmers to be aware of memory leaks and to take steps to prevent them, such as using automated memory management tools, testing their code thoroughly, and carefully managing resources like file handles and network sockets.

@@ -1,0 +1,124 @@
+In Java, there are two types of polymorphism: runtime polymorphism and compile-time polymorphism.
+
+1. Runtime polymorphism:
+Runtime polymorphism is also known as dynamic method dispatch. It is a process in which a call to an overridden method is resolved at runtime, rather than at compile time. This means that the actual method that will be executed is determined at runtime, based on the type of object that the method is being called on. 
+
+For example:
+
+class Animal {
+   public void makeSound() {
+      System.out.println("Animal is making a sound");
+   }
+}
+
+class Dog extends Animal {
+   public void makeSound() {
+      System.out.println("Dog is barking");
+   }
+}
+
+class Cat extends Animal {
+   public void makeSound() {
+      System.out.println("Cat is meowing");
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      Animal animal1 = new Dog();  
+      Animal animal2 = new Cat();  
+
+      animal1.makeSound(); //Output: Dog is barking
+      animal2.makeSound(); //Output: Cat is meowing
+   }
+}
+
+In this example, we have a superclass `Animal` and two subclasses `Dog` and `Cat`. Both the `Dog` and `Cat` classes override the `makeSound()` method of the `Animal` class. In the `Main` class, we create objects of the `Dog` and `Cat` classes and assign them to variables of type `Animal`. When we call the `makeSound()` method on these objects, the actual method that is executed is determined at runtime, based on the type of the object. This is an example of runtime polymorphism.
+
+2. Compile-time polymorphism:
+Compile-time polymorphism is also known as method overloading. It is a process in which multiple methods can have the same name, but different parameters. The correct method to call is determined at compile time, based on the number and types of arguments passed to the method.
+
+For example:
+
+class MathUtils {
+   public int add(int x, int y) {
+      return x + y;
+   }
+   
+   public double add(double x, double y) {
+      return x + y;
+   }
+}
+
+public class Main {
+   public static void main(String[] args) {
+      MathUtils mathUtils = new MathUtils();  
+      
+      int sum1 = mathUtils.add(2, 3); //Output: 5
+      double sum2 = mathUtils.add(2.5, 3.5); //Output: 6.0
+   }
+}
+
+In this example, we have a class `MathUtils` with two `add()` methods that have the same name, but different parameter types (int and double). In the `Main` class, we create an object of the `MathUtils` class and call the `add()` method twice, passing different types of arguments each time. The correct method to call is determined at compile time, based on the number and types of arguments passed to the method. This is an example of compile-time polymorphism.
+
+
+
+
+
+###########################################################################################################################################
+
+
+
+
+Runtime polymorphism is called runtime because it is determined at runtime, when the program is executing. In Java, runtime polymorphism is achieved through method overriding, where a subclass provides its own implementation of a method that is already provided by its superclass.
+
+When a method is called on an object of a class hierarchy, the JVM looks at the actual type of the object at runtime to determine which implementation of the method to execute. This means that the specific implementation of the method that is executed can only be determined at runtime, based on the actual type of the object.
+
+For example, consider the following class hierarchy:
+
+```
+public class Animal {
+    public void speak() {
+        System.out.println("Animal speaks!");
+    }
+}
+
+public class Dog extends Animal {
+    public void speak() {
+        System.out.println("Dog barks!");
+    }
+}
+
+public class Cat extends Animal {
+    public void speak() {
+        System.out.println("Cat meows!");
+    }
+}
+```
+
+In this example, we have an `Animal` class with a `speak` method, and two subclasses `Dog` and `Cat` that override the `speak` method with their own implementation.
+
+Now, suppose we create an array of `Animal` objects and assign a `Dog` object and a `Cat` object to it:
+
+```
+Animal[] animals = new Animal[2];
+animals[0] = new Dog();
+animals[1] = new Cat();
+```
+
+When we call the `speak` method on each object in the array, the specific implementation of the method that is executed depends on the actual type of the object at runtime:
+
+```
+for (Animal animal : animals) {
+    animal.speak();
+}
+```
+
+This will output:
+
+```
+Dog barks!
+Cat meows!
+```
+
+So, the implementation of the `speak` method that is executed is determined at runtime, based on the actual type of the object. This is why runtime polymorphism is called runtime.

@@ -1,0 +1,2 @@
+Welcome to f2 file,
+Here you are learning sequenceinputstream.

@@ -85,8 +85,35 @@ class C01_Collection {
         m.put(45, "df");
         m.put(45, "def");
         System.out.println(m);
-
-
-
     }
 }
+
+// Output:
+// true
+// false
+// [d]
+// [d, fg, 4]
+// 3
+// [d, fg, 4]
+// class java.util.ArrayList
+// 227110
+// [d, fg, 4]
+// 3
+// [a, d, fg, 4]
+// true
+// [a, e, i, o, u]
+// [Ljava.lang.Object;@36baf30c
+// [a, e, i, o, u]
+// [ff, a, e, i, o, u]
+// [ff, a, i, o, u, 5]
+// -----------------------------------------------
+// []
+// [1, 2, 3, 4]
+// [nayan, parth, sarjan, kanj]
+// {1=nayan, 2=parth, 3=sarjan, 4=kanj}
+// true
+// {1=nayan, 2=parth, 3=sarjan}
+// true
+// false
+// -----------------------------------------------
+// {3=d, 45=def}

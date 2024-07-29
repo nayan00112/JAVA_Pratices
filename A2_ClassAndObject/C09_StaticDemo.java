@@ -1,5 +1,5 @@
 // Static Keywords
-// Static keyword are same for all the objects.
+// Static variables are same for all the objects.
 // Non- Static  variables are different for all object.
 // Cannot use "non-stattic variable" in "static" block.
 

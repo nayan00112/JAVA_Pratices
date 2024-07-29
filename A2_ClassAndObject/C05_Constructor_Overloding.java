@@ -15,9 +15,11 @@ class Smartphone {
         internalStorage = i;
         Compny = cname;
         model = p_model;
-        this.price = price; // hear price is local instance and also local variable, both have same name,
-                            // thus this keyword is use to instance variable. left is local variable and
-                            // right is loca instance
+        this.price = price; // hear "price" is local instance and also local variable, both have same name,
+                            // thus "this" keyword is use to instance variable. left is local variable and
+                            // right is local instance
+                            
+        // “this” is not required for all variables in a constructor. It is only required when there is a local variable and an instance variable with the same name.
     }
 
     public void info() {

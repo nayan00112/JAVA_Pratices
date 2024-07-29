@@ -17,6 +17,14 @@ public class B04_IfElse {
             System.out.println("a is larger number.");
             System.out.println("The value of larger number is " + a);
         }
+
+        float pi = 4.54f;
+        float num = 7.65f;
+        int aa = 0;
+        aa = (num > pi) ? ((int) num) : ((int) pi);
+        // var = (condition)?(if true): (if false);
+        
+        System.out.print("value of a is " + aa);
     }
 }
 
@@ -24,4 +32,4 @@ public class B04_IfElse {
 // b is larger number.
 // a is larger number.
 // The value of larger number is 12
-
+// value of a is 7

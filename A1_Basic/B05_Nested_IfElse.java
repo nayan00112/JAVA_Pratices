@@ -1,13 +1,27 @@
 public class B05_Nested_IfElse {
     public static void main(String[] arg) {
-        float pi = 4.54f;
-        float num = 7.65f;
-        int a = 0;
-        a = (num > pi) ? ((int) num) : ((int) pi);
-        // var = (condition)?(if true): (if false);
-        
-        System.out.print("value of a is " + a);
+        float n1 = 48.00f;
+        float n2 = 8.65f;
+        int n3 = 30;
+        System.err.println("Large number is: ");
+        if (n1 > n2){
+            if (n1 > n3){
+                System.err.println(n1);
+            }
+            else{
+                System.out.println(n3);
+            }
+        }
+        else{
+            if (n2 > n3){
+                System.err.println(n2);
+            }
+            else{
+                System.err.println(n3);
+            }
+        }
     }
 }
 // Output:
-// value of a is 7
+// Large number is: 
+// 48.0

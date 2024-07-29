@@ -1,7 +1,7 @@
 /*
  * Abstract Keyword
  * 
- * If we make abstract method in class, then it class must be abstract.
+ * If we make abstract method in class, then it's class must be abstract.
  * 
  * When you only want to declare method (not defined it) then there is an abstract keyword.
  * 
